@@ -18,7 +18,7 @@ def create_app():
 
     db.init_app(app)
 
-    # from .routes import main
-    # app.register_blueprint(main)
+    from .routes import main
+    app.register_blueprint(main)
 
     return app

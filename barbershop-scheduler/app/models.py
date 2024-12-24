@@ -12,6 +12,3 @@ class Appointment(db.Model):
     barber_id = sa.Column(sa.Integer, sa.ForeignKey('barber.id'), nullable=False)
     appointment_time = sa.Column(sa.String(100), nullable=False)
 
-def init_db(app):
-    with app.app_context():
-        sa.create_all()
